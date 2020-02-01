@@ -1,0 +1,11 @@
+[Protocol]
+exec=blessing-qt '%u'
+protocol=blessing
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

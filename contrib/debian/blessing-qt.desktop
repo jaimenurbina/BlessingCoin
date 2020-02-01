@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Blessing Core
+Comment=Blessing P2P Cryptocurrency
+Comment[fr]=Blessing, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Blessing, eşten eşe kriptografik sanal para birimi
+Exec=blessing-qt %u
+Terminal=false
+Type=Application
+Icon=blessing128
+MimeType=x-scheme-handler/blessing;
+Categories=Office;Finance;
+StartupWMClass=Blessing-qt

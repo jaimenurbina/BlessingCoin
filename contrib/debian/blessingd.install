@@ -1,0 +1,3 @@
+usr/local/bin/blessingd usr/bin
+usr/local/bin/blessing-cli usr/bin
+debian/examples/blessing.conf etc/blessing

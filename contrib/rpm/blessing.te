@@ -1,0 +1,81 @@
+policy_module(blessing, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type blessing_t;
+type blessing_exec_t;
+init_daemon_domain(blessing_t, blessing_exec_t)
+
+permissive blessing_t;
+
+type blessing_initrc_exec_t;
+init_script_file(blessing_initrc_exec_t)
+
+type blessing_conf_t;
+files_type(blessing_conf_t)
+
+type blessing_var_lib_t;
+files_type(blessing_var_lib_t)
+
+type blessing_var_run_t;
+files_type(blessing_var_run_t)
+
+type blessing_port_t;
+corenet_port(blessing_port_t)
+
+########################################
+#
+# blessing local policy
+#
+allow blessing_t self:process { fork };
+
+allow blessing_t self:fifo_file rw_fifo_file_perms;
+allow blessing_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(blessing_t, blessing_conf_t, blessing_conf_t)
+manage_files_pattern(blessing_t, blessing_conf_t, blessing_conf_t)
+
+manage_dirs_pattern(blessing_t, blessing_var_lib_t, blessing_var_lib_t)
+manage_files_pattern(blessing_t, blessing_var_lib_t, blessing_var_lib_t)
+files_var_lib_filetrans(blessing_t, blessing_var_lib_t, { dir file })
+
+manage_dirs_pattern(blessing_t, blessing_var_run_t, blessing_var_run_t)
+manage_files_pattern(blessing_t, blessing_var_run_t, blessing_var_run_t)
+
+sysnet_dns_name_resolve(blessing_t)
+corenet_all_recvfrom_unlabeled(blessing_t)
+
+allow blessing_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(blessing_t)
+corenet_tcp_sendrecv_generic_node(blessing_t)
+corenet_tcp_sendrecv_all_ports(blessing_t)
+corenet_tcp_bind_generic_node(blessing_t)
+
+gen_require(`
+    type blessing_port_t;
+')
+allow blessing_t blessing_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type blessing_port_t;
+')
+allow blessing_t blessing_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(blessing_t)
+
+files_read_etc_files(blessing_t)
+
+miscfiles_read_localization(blessing_t)
+
+sysnet_dns_name_resolve(blessing_t)
+
+allow blessing_t blessing_exec_t:file execute_no_trans;
+allow blessing_t self:process setsched;
+corecmd_exec_ls(blessing_t)
+corenet_tcp_connect_http_port(blessing_t)
+dev_read_urand(blessing_t)
+fs_getattr_xattr_fs(blessing_t)
+kernel_read_system_state(blessing_t)

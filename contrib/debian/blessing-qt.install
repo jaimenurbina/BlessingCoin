@@ -1,0 +1,6 @@
+usr/local/bin/blessing-qt usr/bin
+share/pixmaps/blessing32.xpm usr/share/pixmaps
+share/pixmaps/blessing16.xpm usr/share/pixmaps
+share/pixmaps/blessing128.png usr/share/pixmaps
+debian/blessing-qt.desktop usr/share/applications
+debian/blessing-qt.protocol usr/share/kde4/services/

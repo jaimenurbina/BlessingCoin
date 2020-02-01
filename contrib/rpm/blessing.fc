@@ -1,0 +1,8 @@
+/usr/bin/blessing-cli		--	gen_context(system_u:object_r:blessing_exec_t,s0)
+/usr/sbin/blessingd		--	gen_context(system_u:object_r:blessing_exec_t,s0)
+/usr/lib(64)?/blessing/blessingd		--	gen_context(system_u:object_r:blessing_exec_t,s0)
+
+/etc/blessing(/.*)?		gen_context(system_u:object_r:blessing_conf_t,s0)
+/var/lib/blessing(/.*)?		gen_context(system_u:object_r:blessing_var_lib_t,s0)
+
+(/var)?/run/blessingd(/.*)?   gen_context(system_u:object_r:blessing_var_run_t,s0)

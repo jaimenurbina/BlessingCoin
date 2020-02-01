@@ -1,0 +1,37 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/blessing_bg.qm</file>
+        <file alias="ca">locale/blessing_ca.qm</file>
+        <file alias="cs">locale/blessing_cs.qm</file>
+        <file alias="da">locale/blessing_da.qm</file>
+        <file alias="de">locale/blessing_de.qm</file>
+        <file alias="en">locale/blessing_en.qm</file>
+        <file alias="en_GB">locale/blessing_en_GB.qm</file>
+        <file alias="en_US">locale/blessing_en_US.qm</file>
+        <file alias="eo">locale/blessing_eo.qm</file>
+        <file alias="es">locale/blessing_es.qm</file>
+        <file alias="es_ES">locale/blessing_es_ES.qm</file>
+        <file alias="fi">locale/blessing_fi.qm</file>
+        <file alias="fr_FR">locale/blessing_fr_FR.qm</file>
+        <file alias="hi_IN">locale/blessing_hi_IN.qm</file>
+        <file alias="hr">locale/blessing_hr.qm</file>
+        <file alias="hr_HR">locale/blessing_hr_HR.qm</file>
+        <file alias="it">locale/blessing_it.qm</file>
+        <file alias="ja">locale/blessing_ja.qm</file>
+        <file alias="ko_KR">locale/blessing_ko_KR.qm</file>
+        <file alias="lt_LT">locale/blessing_lt_LT.qm</file>
+        <file alias="nl">locale/blessing_nl.qm</file>
+        <file alias="pl">locale/blessing_pl.qm</file>
+        <file alias="pt">locale/blessing_pt.qm</file>
+        <file alias="pt_BR">locale/blessing_pt_BR.qm</file>
+        <file alias="ro_RO">locale/blessing_ro_RO.qm</file>
+        <file alias="ru">locale/blessing_ru.qm</file>
+        <file alias="sk">locale/blessing_sk.qm</file>
+        <file alias="sv">locale/blessing_sv.qm</file>
+        <file alias="tr">locale/blessing_tr.qm</file>
+        <file alias="uk">locale/blessing_uk.qm</file>
+        <file alias="vi">locale/blessing_vi.qm</file>
+        <file alias="zh_CN">locale/blessing_zh_CN.qm</file>
+        <file alias="zh_TW">locale/blessing_zh_TW.qm</file>
+    </qresource>
+</RCC>
